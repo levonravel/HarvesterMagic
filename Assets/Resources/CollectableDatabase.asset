@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e9c4422bbe73594e97028dec356effa, type: 3}
+  m_Name: CollectableDatabase
+  m_EditorClassIdentifier: 
+  Items:
+  - {fileID: 528152052003410765, guid: 6baad98cb7fbdea44a8ae551380cecca, type: 3}
+  - {fileID: 1667839805388948141, guid: ebc34f7d54e50294c980ce907bbd2aa0, type: 3}
+  - {fileID: 5271766119622443850, guid: 46c3c4a0a4353414db7c634b52494cc0, type: 3}
+  - {fileID: 8638634520300589607, guid: 2ab883738efd9b94a9ffe27478821920, type: 3}
+  StandardColors:
+  - serializedVersion: 2
+    rgba: 4278190335
+  - serializedVersion: 2
+    rgba: 4278255360
+  - serializedVersion: 2
+    rgba: 4294901760
+  Modifiers:
+    list:
+    - Key:
+        serializedVersion: 2
+        rgba: 4278190335
+      Value:
+        Points: -10
+    - Key:
+        serializedVersion: 2
+        rgba: 4278255360
+      Value:
+        Points: 10
+    - Key:
+        serializedVersion: 2
+        rgba: 4294901760
+      Value:
+        Points: 20
+    - Key:
+        serializedVersion: 2
+        rgba: 4278255615
+      Value:
+        Points: 0
+    - Key:
+        serializedVersion: 2
+        rgba: 4294902015
+      Value:
+        Points: 20
