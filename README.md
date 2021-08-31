@@ -3,3 +3,5 @@ Current issues or what could be done better<br />
 * (Fixed) Clean up code where variables are not being used <br />
 * (Fixed) Make sure the player cannot fully move off the screen <br />
 * (Fixed) Ensure the score cannot move above 20 when waiting on pressing restart game <br />
+<br />
+It took about 3.5 hours to create the game above -Levon
