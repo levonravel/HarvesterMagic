@@ -559,7 +559,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 500901810}
         m_TargetAssemblyTypeName: ShinyBoxInteractive.ScoreKeeper, Assembly-CSharp
         m_MethodName: ResetGame
         m_Mode: 1
