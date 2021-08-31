@@ -3,7 +3,7 @@ using UnityEngine;
 namespace ShinyBoxInteractive
 {
     [System.Serializable]
-    public class Item
+    public struct Item
     {
         public int Points;
         public bool ShouldMultiply;
