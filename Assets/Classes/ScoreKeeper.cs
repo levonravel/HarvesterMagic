@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,9 +25,14 @@ namespace ShinyBoxInteractive
         {
             set
             {
+                if (Spawner.Instance.IsGameOver) return;
                 score += value;
                 if (score >= PointsToWin)
                 {
+                    if(score > PointsToWin)
+                    {
+                        score = PointsToWin;
+                    }
                     GameOver();
                 }
                 ScoreText.text = score.ToString();

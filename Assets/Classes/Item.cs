@@ -1,5 +1,3 @@
-using UnityEngine;
-
 namespace ShinyBoxInteractive
 {
     [System.Serializable]

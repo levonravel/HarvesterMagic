@@ -98,10 +98,20 @@ namespace ShinyBoxInteractive
             else
                 return false;
         }
+        /// <summary>
+        /// Created a Key indexer Levon Ravel
+        /// </summary>
+        /// <param name="index"></param>
+        /// <returns></returns>
         public TKey GetKeyAtIndex(int index)
         {
             return list[index].Key;
         }
+        /// <summary>
+        /// Created a Value indexer Levon Ravel
+        /// </summary>
+        /// <param name="index"></param>
+        /// <returns></returns>
         public TValue GetValueAtIndex(int index)
         {
             return list[index].Value;

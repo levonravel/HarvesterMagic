@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace ShinyBoxInteractive
@@ -23,11 +21,16 @@ namespace ShinyBoxInteractive
         public int MaxScreenObjects;
         public float MinX, MaxX, MaxY, StaticZ;
         private Pool pool;
-        private Vector2 screenResolution;
         private Vector3 randomPosition;
         public int Count;
         private bool gameOver;
-
+        public bool IsGameOver
+        {
+            get
+            {
+                return gameOver;
+            }
+        }
         public void Start()
         {
             gameOver = false;

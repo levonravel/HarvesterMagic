@@ -5,18 +5,23 @@ namespace ShinyBoxInteractive
     public class Controller : MonoBehaviour
     {
         public float Speed;
-        public Vector3 direction;
-        private Material mat;
+        public Vector3 Direction;
         private int priorValue;
+        private Vector3 priorPosition;
 
-        public void Start()
+        void LateUpdate()
         {
-            mat = GetComponent<MeshRenderer>().material;
-        }
-        void Update()
-        {
-            direction.x = Input.GetAxis("Horizontal");
-            transform.position += direction * Time.deltaTime * Speed;
+            Direction.x = Input.GetAxis("Horizontal");
+            priorPosition = transform.position;
+            transform.position += Direction * Time.deltaTime * Speed;
+            if(transform.position.x > Spawner.Instance.MaxX)
+            {
+                transform.position = priorPosition;
+            }
+            if(transform.position.x < Spawner.instance.MinX)
+            {
+                transform.position = priorPosition;
+            }
         }
         public void OnTriggerEnter(Collider other)
         {
