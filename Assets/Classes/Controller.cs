@@ -21,14 +21,20 @@ namespace ShinyBoxInteractive
         public void OnTriggerEnter(Collider other)
         {
             var objectColor = other.GetComponent<MeshRenderer>().material.color;
-
-            if (CollectableDatabase.Instance.Modifiers[objectColor] != null)
+            
+            if (CollectableDatabase.Instance.Modifiers[objectColor].ShouldMultiply)
             {
-                if (CollectableDatabase.Instance.Modifiers[objectColor].ShouldMultiply)
+                if (priorValue == 2)
                 {
-                    ScoreKeeper.Instance.AdjustScore = priorValue * CollectableDatabase.Instance.Modifiers[objectColor].Points;
+                    priorValue = 0;
                 }
-                ScoreKeeper.Instance.AdjustScore = CollectableDatabase.Instance.Modifiers[objectColor].Points;
+                ScoreKeeper.Instance.AdjustScore = priorValue * CollectableDatabase.Instance.Modifiers[objectColor].Points;
+                priorValue = 0;
+            }
+            else
+            {
+                priorValue = CollectableDatabase.Instance.Modifiers[objectColor].Points;
+                ScoreKeeper.Instance.AdjustScore = priorValue;
             }
             Spawner.Instance.Recycle(other.gameObject);
         }
