@@ -17,13 +17,6 @@ MonoBehaviour:
   - {fileID: 1667839805388948141, guid: ebc34f7d54e50294c980ce907bbd2aa0, type: 3}
   - {fileID: 5271766119622443850, guid: 46c3c4a0a4353414db7c634b52494cc0, type: 3}
   - {fileID: 8638634520300589607, guid: 2ab883738efd9b94a9ffe27478821920, type: 3}
-  StandardColors:
-  - serializedVersion: 2
-    rgba: 4278190335
-  - serializedVersion: 2
-    rgba: 4278255360
-  - serializedVersion: 2
-    rgba: 4294901760
   Modifiers:
     list:
     - Key:
@@ -31,23 +24,28 @@ MonoBehaviour:
         rgba: 4278190335
       Value:
         Points: -10
+        ShouldMultiply: 0
     - Key:
         serializedVersion: 2
         rgba: 4278255360
       Value:
         Points: 10
+        ShouldMultiply: 0
     - Key:
         serializedVersion: 2
         rgba: 4294901760
       Value:
-        Points: 20
+        Points: 2
+        ShouldMultiply: 1
     - Key:
         serializedVersion: 2
         rgba: 4278255615
       Value:
         Points: 0
+        ShouldMultiply: 0
     - Key:
         serializedVersion: 2
         rgba: 4294902015
       Value:
         Points: 20
+        ShouldMultiply: 0

@@ -4,17 +4,14 @@ namespace ShinyBoxInteractive
 {
     public class Controller : MonoBehaviour
     {
-        public Color32 CurrentColor;
         public float Speed;
         public Vector3 direction;
-        private Color priorColor;
         private Material mat;
+        private int priorValue;
 
         public void Start()
         {
             mat = GetComponent<MeshRenderer>().material;
-            priorColor = new Color32(0, 0, 0, 255);
-            mat.color = priorColor;
         }
         void Update()
         {
@@ -23,22 +20,16 @@ namespace ShinyBoxInteractive
         }
         public void OnTriggerEnter(Collider other)
         {
-            priorColor = CurrentColor;
-            CurrentColor = other.GetComponent<MeshRenderer>().material.color + CurrentColor;
-            //ugly serizable doesnt have a Try method.. Implement one day?
-            if(CurrentColor == priorColor)
+            var objectColor = other.GetComponent<MeshRenderer>().material.color;
+
+            if (CollectableDatabase.Instance.Modifiers[objectColor] != null)
             {
-                CurrentColor = new Color32(0, 0, 0, 255);
+                if (CollectableDatabase.Instance.Modifiers[objectColor].ShouldMultiply)
+                {
+                    ScoreKeeper.Instance.AdjustScore = priorValue * CollectableDatabase.Instance.Modifiers[objectColor].Points;
+                }
+                ScoreKeeper.Instance.AdjustScore = CollectableDatabase.Instance.Modifiers[objectColor].Points;
             }
-            try
-            {
-                ScoreKeeper.Instance.AdjustScore = CollectableDatabase.Instance.Modifiers[CurrentColor].Points;                
-            }
-            catch
-            {
-                CurrentColor = new Color32(0, 0, 0, 255);
-            }
-            mat.color = CurrentColor;
             Spawner.Instance.Recycle(other.gameObject);
         }
     }

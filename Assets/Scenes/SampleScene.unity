@@ -309,7 +309,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 95ef4096324906d449a125154edaf618, type: 2}
+  - {fileID: 2100000, guid: 6c7b0d3436d62994f8c6f02a4c7c576a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -398,9 +398,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5baf45fe0a5a4e4fb5fa06432fc672a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentColor:
-    serializedVersion: 2
-    rgba: 0
   Speed: 4
   direction: {x: 0, y: 0, z: 0}
 --- !u!65 &273952292
@@ -435,7 +432,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6c7b0d3436d62994f8c6f02a4c7c576a, type: 2}
+  - {fileID: 2100000, guid: 07638f94114967f47b30354b37a4aae7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -655,7 +652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c115ce9899c1dee4598968a2aea2cb92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PointsToWin: 20
+  PointsToWin: 100
   ScoreText: {fileID: 22139625}
   GameOverScreen: {fileID: 1710637780}
 --- !u!1 &694808238
@@ -1353,7 +1350,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 95ef4096324906d449a125154edaf618, type: 2}
+  - {fileID: 2100000, guid: 6c7b0d3436d62994f8c6f02a4c7c576a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

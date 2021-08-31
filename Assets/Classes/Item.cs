@@ -6,5 +6,6 @@ namespace ShinyBoxInteractive
     public class Item
     {
         public int Points;
+        public bool ShouldMultiply;
     }
 }

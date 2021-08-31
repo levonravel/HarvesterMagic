@@ -18,7 +18,6 @@ namespace ShinyBoxInteractive
             }
         }
         public GameObject[] Items;
-        public Color32[] StandardColors;
         public SerializableDictionary<Color32, Item> Modifiers = new SerializableDictionary<Color32, Item>();
     }
 }

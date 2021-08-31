@@ -12,7 +12,7 @@ namespace ShinyBoxInteractive
     public class SerializableDictionary<TKey, TValue> : SerializableDictionary, ISerializationCallbackReceiver, IDictionary<TKey, TValue>
     {
         [SerializeField]
-        private List<SerializableKeyValuePair> list = new List<SerializableKeyValuePair>();
+        public List<SerializableKeyValuePair> list = new List<SerializableKeyValuePair>();
 
         [Serializable]
         public struct SerializableKeyValuePair
@@ -97,6 +97,14 @@ namespace ShinyBoxInteractive
             }
             else
                 return false;
+        }
+        public TKey GetKeyAtIndex(int index)
+        {
+            return list[index].Key;
+        }
+        public TValue GetValueAtIndex(int index)
+        {
+            return list[index].Value;
         }
         public bool TryGetValue(TKey key, out TValue value)
         {

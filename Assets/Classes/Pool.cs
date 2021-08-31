@@ -42,8 +42,8 @@ namespace ShinyBoxInteractive
         {
             var randomIndex = Random.Range(0, CollectableDatabase.Instance.Items.Length);
             var collectable = GameObject.Instantiate(CollectableDatabase.Instance.Items[randomIndex]);
-            randomIndex = Random.Range(0, CollectableDatabase.Instance.StandardColors.Length);
-            collectable.GetComponent<MeshRenderer>().material.color = CollectableDatabase.Instance.StandardColors[randomIndex];
+            randomIndex = Random.Range(0, CollectableDatabase.Instance.Modifiers.Count);
+            collectable.GetComponent<MeshRenderer>().material.color = CollectableDatabase.Instance.Modifiers.GetKeyAtIndex(randomIndex);
             return collectable;
         }
     }
